@@ -1,0 +1,171 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">{{name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+      <!--<form class="form-inline my-2 my-lg-0 ml-auto mr-5">-->
+        <!--<input class="form-control mr-sm-2" type="search" placeholder="Search Name" aria-label="Search">-->
+        <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Go</button>-->
+      <!--</form>-->
+      <!--<form class="form-inline my-2 my-lg-0">-->
+        <!--<input class="form-control mr-sm-2" type="search" placeholder="Search Number" aria-label="Search">-->
+        <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Go</button>-->
+      <!--</form>-->
+    <!--</div>-->
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-12">
+      <div class="box1">
+        <h4 class="title">#{{details?.id}}</h4>
+        <div class="button-wrap">
+          <div class="add-border" style="margin-right: 5px" *ngFor="let t of details?.types">{{t.type.name}}</div>
+          <!--<div class="add-border2">Poison</div>-->
+        </div>
+        <div class="image-wrap">
+          <img src="{{getImages()}}" class="img-respon" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12">
+      <div class="tab-wrap">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#base">Base Start</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#evolution">Sprites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#moves">Moves</a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active container" id="about">
+           <div class="about-content">
+            <div class="about-wrap1">
+              <div>
+                <h6>Weight</h6>
+                <h6>Height</h6>
+                <h6>Base Happiness</h6>
+                <h6>Capture Rate</h6>
+                <h6>Baby</h6>
+                <h6>Habitat</h6>
+              </div>
+              <div class="add-spacing">
+                <h6>{{details?.weight}}</h6>
+                <h6>{{details?.height}}</h6>
+                <h6>{{evolutions?.base_happiness}}</h6>
+                <h6>{{evolutions?.capture_rate}}</h6>
+                <h6>{{evolutions?.is_baby}}</h6>
+                <h6>{{evolutions?.habitat?.name}}</h6>
+              </div>
+            </div>
+            <!--<div class="about-wrap2">-->
+              <!--<div class="header-title">-->
+                <!--<h3 class="title">Breading</h3>-->
+              <!--</div>-->
+              <!--<div class="row-wrap3">-->
+               <!--<h6>Gender</h6> <h6 class="title-female">Female</h6> <h6 class="title-male">Male</h6>-->
+              <!--</div>-->
+            <!--</div>-->
+           </div>
+          </div>
+          <div class="tab-pane container" id="base">
+            <div class="about-content">
+              <div class="base-wrap">
+                <div class="base-title-wrap" *ngFor="let s of details?.stats">
+                  <div class="add-border3">{{s.stat.name}}: {{s.base_stat}}</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane container" id="evolution">
+            <div class="evolution-content">
+              <div class="h1-title-wrap">
+                <h5 class="title">Evolution Chain</h5>
+              </div>
+              <div class="row">
+                <!--back_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"-->
+                <!--back_female: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/3.png"-->
+                <!--back_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/3.png"-->
+                <!--back_shiny_female: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/3.png"-->
+                <!--front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"-->
+                <!--front_female: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png"-->
+                <!--front_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png"-->
+                <!--front_shiny_female: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/3.png"-->
+                <div class="col-md-4" *ngIf="details?.sprites?.back_default">
+                  <div class="Box1"> {{d}}
+                    <img src="{{details?.sprites?.back_default}}" class="img-first" />
+                    <h6>Back Default</h6>
+                  </div>
+                </div>
+                <div class="col-md-4" *ngIf="details?.sprites?.back_female">
+                  <div class="Box1"> {{d}}
+                    <img src="{{details?.sprites?.back_female}}" class="img-first" />
+                    <h6>Back Female</h6>
+                  </div>
+                </div>
+                <div class="col-md-4" *ngIf="details?.sprites?.back_shiny">
+                  <div class="Box1"> {{d}}
+                    <img src="{{details?.sprites?.back_shiny}}" class="img-first" />
+                    <h6>Back Shiny</h6>
+                  </div>
+                </div>
+                <div class="col-md-4" *ngIf="details?.sprites?.front_default">
+                  <div class="Box1"> {{d}}
+                    <img src="{{details?.sprites?.front_default}}"class="img-first" />
+                    <h6>Front Default</h6>
+                  </div>
+                </div>
+                <div class="col-md-4" *ngIf="details?.sprites?.front_female">
+                  <div class="Box1"> {{d}}
+                    <img src="{{details?.sprites?.front_female}}" class="img-first" />
+                    <h6>Front Female</h6>
+                  </div>
+                </div>
+                <div class="col-md-4" *ngIf="details?.sprites?.front_shiny">
+                  <div class="Box1"> {{d}}
+                    <img src="{{details?.sprites?.front_shiny}}" class="img-first" />
+                    <h6>Front Shiny</h6>
+                  </div>
+                </div>
+                <div class="col-md-4" *ngIf="details?.sprites?.front_shiny_female">
+                  <div class="Box1"> {{d}}
+                    <img src="{{details?.sprites?.front_shiny_female}}" class="img-first" />
+                    <h6>Front Shiny Female</h6>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane container" id="moves">
+            <div class="about-content">
+              <div class="base-wrap">
+                <div class="base-title-wrap" *ngFor="let m of details?.moves">
+                  <div class="add-border3">{{m.move.name}}</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

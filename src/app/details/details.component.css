@@ -1,0 +1,154 @@
+.navbar-brand {
+  font-size: 28px;
+}
+h1 {
+  font-weight:600;
+}
+h2 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 400;
+}
+h4 {
+  font-weight: 300;
+}
+.box1 {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 17px;
+  padding-top: 5px;
+  color: #222;
+}
+.add-border {
+  border: 1px solid transparent;
+  height: 27px;
+  width: 100px;
+  background-color:red;
+  margin-bottom: 8px;
+  display:flex;
+  color: #fff;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.add-border2 {
+  border: 1px solid transparent;
+  height: 27px;
+  width: 100px;
+  background-color:red;
+  margin-left: 16px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  display:flex;
+  color:#fff;
+  align-items: center;
+  justify-content: center;
+}
+.button-wrap {
+  display: flex;
+  flex-direction: row; 
+}
+.image-wrap {
+  display: flex;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+.img-respon {
+  width:300px;
+  height:300px;
+}
+.tab-wrap {
+  padding-right: 5em;
+  padding-top: 3em;
+}
+.about-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+.about-wrap1 {
+  display: flex;
+  flex-direction: row;
+}
+.add-spacing {
+  padding-left:3em;
+  color: #444;  
+}
+.about-wrap2 {
+  display: flex;
+  flex-direction: column;
+}
+.header-title {
+  padding-top:3em;
+}
+.row-wrap3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title-female {
+  padding-left: 40px;
+  font-size: 14px;
+}
+.title-male {
+  padding-left: 20px;
+  font-size: 14px;
+}
+.base-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.base-title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0.5em;
+}
+.base-title-wrap2 {
+  padding-left: 2em;
+}
+.add-border3 {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  height: 27px;
+  width: 100%;
+  background-color:red;
+  margin-left: 8px;
+  color: #fff;
+  margin-bottom: 12px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.Box1 {
+  display: flex;
+  flex-direction: column;
+}
+.Box2 {
+  display: flex;
+  flex-direction: column;
+}
+.Box3 {
+  display: flex;
+  flex-direction: column;
+}
+.img-first {
+  width: 90px;
+  height: 90px;
+}
+.img-second {
+  width: 80px;
+  height: 90px;
+}
+.img-thrid {
+  width: 80px;
+  height: 90px;
+}
+.evolution-content {
+  padding-top: 2em;
+}
